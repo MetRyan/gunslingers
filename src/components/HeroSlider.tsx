@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 export const HeroSlider: React.FC = () => {
   // Using the uploaded image and some placeholders for the effect
   const slides = [
-    { id: 1, url: '/z7746465426269_8513dfa78885acf8887221d034dc5a82.jpg', title: 'Gunslingers Flag Football Club.' },
+    { id: 1, url: '/Team', title: 'Gunslingers Flag Football Club.' },
     { id: 2, url: 'https://picsum.photos/seed/guns-hero-2/1920/1080', title: 'BORN TO WIN.' },
     { id: 3, url: 'https://picsum.photos/seed/guns-hero-3/1920/1080', title: 'ELITE PERFORMANCE.' },
     { id: 4, url: 'https://picsum.photos/seed/guns-hero-4/1920/1080', title: 'JOIN THE SQUAD.' },
