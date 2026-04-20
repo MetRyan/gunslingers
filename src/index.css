@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bebas Neue", cursive;
+
+  --color-background: hsl(0 0% 0%);
+  --color-foreground: hsl(0 0% 100%);
+  --color-primary: #A31D21; /* Deep Red from the logo */
+  --color-accent: hsl(45 100% 50%);
+  --color-muted: hsl(0 0% 12%);
+  --color-border: hsl(0 0% 20%);
+
+  --radius-none: 0px;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-none transition-colors duration-300;
+    border-radius: theme('radius.none');
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-white selection:text-black;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display uppercase italic tracking-tighter;
+  }
+}
+
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 1px currentColor;
+    -webkit-text-fill-color: transparent;
+  }
+  .reveal-up {
+    animation: reveal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
